@@ -7,7 +7,9 @@
 
 import UIKit
 
-class SeccondViewController: UIViewController {
+class SeccondViewController: UIViewController, Storyboardable {
+    
+    weak var coordinator: AppCoordinator?
 
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -12,3 +12,10 @@ protocol Storyboardable {
 }
 
 
+extension Storyboardable where Self: UIViewController {
+    static func createObj() -> Self {
+        let id = String(describing: self)
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        return storyboard.instantiateViewController(identifier: id) as! Self
+    }
+}
