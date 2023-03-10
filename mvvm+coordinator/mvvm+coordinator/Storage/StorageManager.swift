@@ -46,7 +46,7 @@ extension StorageManager: StorageManagerProtocol {
     
     func set<T: Encodable>(object: T?, forKey key: Keys) {
         let jsonData = try? JSONEncoder().encode(object)
-        store(object, key: key.rawValue)
+        store(jsonData, key: key.rawValue)
     }
     
     func int(forKey key: Keys) -> Int? {

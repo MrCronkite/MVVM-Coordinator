@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B20FFB6B29BBBD5E005318CD /* Resouces.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20FFB6A29BBBD5E005318CD /* Resouces.swift */; };
 		B22FFD5029BA58BD00684C69 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22FFD4F29BA58BD00684C69 /* AppDelegate.swift */; };
 		B22FFD5429BA58BD00684C69 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22FFD5329BA58BD00684C69 /* FirstViewController.swift */; };
 		B22FFD5729BA58BD00684C69 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B22FFD5529BA58BD00684C69 /* Main.storyboard */; };
@@ -20,9 +21,11 @@
 		B22FFD7229BA66B300684C69 /* Storyboardable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22FFD7129BA66B300684C69 /* Storyboardable.swift */; };
 		B22FFD7729BB008D00684C69 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22FFD7629BB008D00684C69 /* StorageManager.swift */; };
 		B23D96BE29BBB31B00E94C06 /* SingInPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23D96BD29BBB31B00E94C06 /* SingInPageViewController.swift */; };
+		B23D96C229BBBC6D00E94C06 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23D96C129BBBC6D00E94C06 /* UIColorExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B20FFB6A29BBBD5E005318CD /* Resouces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resouces.swift; sourceTree = "<group>"; };
 		B22FFD4C29BA58BD00684C69 /* mvvm+coordinator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "mvvm+coordinator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B22FFD4F29BA58BD00684C69 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B22FFD5329BA58BD00684C69 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -38,6 +41,7 @@
 		B22FFD7129BA66B300684C69 /* Storyboardable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboardable.swift; sourceTree = "<group>"; };
 		B22FFD7629BB008D00684C69 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		B23D96BD29BBB31B00E94C06 /* SingInPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingInPageViewController.swift; sourceTree = "<group>"; };
+		B23D96C129BBBC6D00E94C06 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,7 @@
 		B22FFD6C29BA62A500684C69 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				B23D96BF29BBBC2F00E94C06 /* Helpers */,
 				B22FFD5529BA58BD00684C69 /* Main.storyboard */,
 				B22FFD5329BA58BD00684C69 /* FirstViewController.swift */,
 				B22FFD6D29BA645E00684C69 /* SeccondViewController.swift */,
@@ -134,6 +139,23 @@
 				B22FFD7629BB008D00684C69 /* StorageManager.swift */,
 			);
 			path = Storage;
+			sourceTree = "<group>";
+		};
+		B23D96BF29BBBC2F00E94C06 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				B23D96C029BBBC3900E94C06 /* Extensions */,
+				B20FFB6A29BBBD5E005318CD /* Resouces.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		B23D96C029BBBC3900E94C06 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B23D96C129BBBC6D00E94C06 /* UIColorExtension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -215,7 +237,9 @@
 				B22FFD7029BA647500684C69 /* ThirdViewController.swift in Sources */,
 				B22FFD7229BA66B300684C69 /* Storyboardable.swift in Sources */,
 				B22FFD6B29BA621500684C69 /* AppCoordinator.swift in Sources */,
+				B23D96C229BBBC6D00E94C06 /* UIColorExtension.swift in Sources */,
 				B22FFD5029BA58BD00684C69 /* AppDelegate.swift in Sources */,
+				B20FFB6B29BBBD5E005318CD /* Resouces.swift in Sources */,
 				B22FFD5A29BA58BD00684C69 /* mvvm_coordinator.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

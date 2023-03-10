@@ -14,6 +14,7 @@ class FirstViewController: UIViewController, Storyboardable {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "First VC"
+        print(Resouces.Colors.textFieldColorbg)
     }
 
     @IBAction func openSeccondVC(_ sender: Any) {

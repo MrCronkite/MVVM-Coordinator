@@ -9,31 +9,55 @@ import UIKit
 
 final class SingInPageViewController: UIViewController {
     
-    var textLable: UILabel = {
-        let text = UILabel()
-        text.font = UIFont.systemFont(ofSize: 14)
-        text.textColor = .red
-        text.text = "hello world"
-        return text
+    let textLable: UILabel = {
+        let lable = UILabel()
+        lable.font = UIFont.systemFont(ofSize: 40, weight: .medium)
+        lable.textColor = Resouces.Colors.text
+        lable.text = "Sign in"
+        return lable
     }()
- 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    
+    let textField: UITextField = {
+        let textField = UITextField()
+        textField.textAlignment = .center
+        textField.layer.cornerRadius = 15
+        textField.backgroundColor = Resouces.Colors.textFieldColorbg
+        textField.attributedPlaceholder = NSAttributedString(string: "First name",
+                                                             attributes: [.foregroundColor: UIColor.white])
+        return textField
+    }()
+    
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         
         view.backgroundColor = .white
-        setupView()
+        textLable.textColor = Resouces.Colors.textFieldColorbg
+        
+        configure()
     }
     
-    //MARK: - Constraints
-    private func setupView() {
-        [textLable].forEach {
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    
+    
+    private func configure() {
+        
+        [textLable, textField].forEach {
             $0.translatesAutoresizingMaskIntoConstraints = false
             view.addSubview($0)
         }
         
         NSLayoutConstraint.activate([
-            textLable.topAnchor.constraint(equalTo: view.topAnchor, constant: 60),
-            textLable.centerXAnchor.constraint(equalTo: view.centerXAnchor)
+            textLable.topAnchor.constraint(equalTo: view.topAnchor, constant: 156),
+            textLable.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            
+            textField.widthAnchor.constraint(equalToConstant: 230),
+            textField.heightAnchor.constraint(equalToConstant: 30),
+            textField.topAnchor.constraint(equalTo: textLable.topAnchor, constant: 104),
+            textField.centerXAnchor.constraint(equalTo: view.centerXAnchor)
         ])
     }
 }
+
