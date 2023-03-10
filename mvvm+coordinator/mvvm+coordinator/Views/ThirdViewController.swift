@@ -13,6 +13,14 @@ class ThirdViewController: UIViewController, Storyboardable {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Third VC"
     }
-
+    
+    @IBAction func openFirstVC(_ sender: Any) {
+        coordinator?.openFirsVC()
+    }
+    @IBAction func openSeccond(_ sender: Any) {
+        coordinator?.openSecondVC()
+    }
+    
 }

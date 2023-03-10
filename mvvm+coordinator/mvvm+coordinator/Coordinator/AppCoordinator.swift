@@ -19,4 +19,24 @@ class AppCoordinator: Coordinator {
         vc.coordinator = self
         navigationController.pushViewController(vc, animated: false)
     }
+    
+    func openFirsVC() {
+        let vc = FirstViewController.createObj()
+        vc.coordinator = self
+        navigationController.pushViewController(vc, animated: true)
+    }
+    
+    func openSecondVC() {
+        let vc = SeccondViewController.createObj()
+        vc.coordinator = self
+        navigationController.pushViewController(vc, animated: true)
+    }
+    
+    func openThirddVC() {
+        let vc = ThirdViewController.createObj()
+        vc.coordinator = self
+        navigationController.pushViewController(vc, animated: true)
+    }
+    
+    
 }
