@@ -11,27 +11,45 @@ final class SingInPageViewController: UIViewController {
     
     let textLable: UILabel = {
         let lable = UILabel()
-        lable.font = UIFont.systemFont(ofSize: 40, weight: .medium)
+        lable.font = UIFont.systemFont(ofSize: 30, weight: .medium)
         lable.textColor = Resouces.Colors.text
         lable.text = "Sign in"
         return lable
     }()
     
-    let textField: UITextField = {
+    let textFieldFirstName: UITextField = {
         let textField = UITextField()
         textField.textAlignment = .center
         textField.layer.cornerRadius = 15
         textField.backgroundColor = Resouces.Colors.textFieldColorbg
         textField.attributedPlaceholder = NSAttributedString(string: "First name",
-                                                             attributes: [.foregroundColor: UIColor.white])
+                                                             attributes: [.foregroundColor: Resouces.Colors.textFieldColorText])
+        return textField
+    }()
+    
+    let textFieldLastName: UITextField = {
+        let textField = UITextField()
+        textField.textAlignment = .center
+        textField.layer.cornerRadius = 15
+        textField.backgroundColor = Resouces.Colors.textFieldColorbg
+        textField.attributedPlaceholder = NSAttributedString(string: "Last name",
+                                                             attributes: [.foregroundColor: Resouces.Colors.textFieldColorText])
+        return textField
+    }()
+    
+    let textFieldEmail: UITextField = {
+        let textField = UITextField()
+        textField.textAlignment = .center
+        textField.layer.cornerRadius = 15
+        textField.backgroundColor = Resouces.Colors.textFieldColorbg
+        textField.attributedPlaceholder = NSAttributedString(string: "Email",
+                                                             attributes: [.foregroundColor: Resouces.Colors.textFieldColorText])
         return textField
     }()
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-        
         view.backgroundColor = .white
-        textLable.textColor = Resouces.Colors.textFieldColorbg
         
         configure()
     }
@@ -40,11 +58,9 @@ final class SingInPageViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
-    
-    
+    //MARK: - Configure
     private func configure() {
-        
-        [textLable, textField].forEach {
+        [textLable, textFieldFirstName, textFieldLastName, textFieldEmail].forEach {
             $0.translatesAutoresizingMaskIntoConstraints = false
             view.addSubview($0)
         }
@@ -53,10 +69,20 @@ final class SingInPageViewController: UIViewController {
             textLable.topAnchor.constraint(equalTo: view.topAnchor, constant: 156),
             textLable.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             
-            textField.widthAnchor.constraint(equalToConstant: 230),
-            textField.heightAnchor.constraint(equalToConstant: 30),
-            textField.topAnchor.constraint(equalTo: textLable.topAnchor, constant: 104),
-            textField.centerXAnchor.constraint(equalTo: view.centerXAnchor)
+            textFieldFirstName.widthAnchor.constraint(equalToConstant: 290),
+            textFieldFirstName.heightAnchor.constraint(equalToConstant: 30),
+            textFieldFirstName.topAnchor.constraint(equalTo: textLable.topAnchor, constant: 104),
+            textFieldFirstName.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            
+            textFieldLastName.widthAnchor.constraint(equalToConstant: 290),
+            textFieldLastName.heightAnchor.constraint(equalToConstant: 30),
+            textFieldLastName.topAnchor.constraint(equalTo: textFieldFirstName.topAnchor, constant: 60),
+            textFieldLastName.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            
+            textFieldEmail.widthAnchor.constraint(equalToConstant: 290),
+            textFieldEmail.heightAnchor.constraint(equalToConstant: 30),
+            textFieldEmail.topAnchor.constraint(equalTo: textFieldLastName.topAnchor, constant: 60),
+            textFieldEmail.centerXAnchor.constraint(equalTo: view.centerXAnchor)
         ])
     }
 }
