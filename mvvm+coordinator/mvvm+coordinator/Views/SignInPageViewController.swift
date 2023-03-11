@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class SingInPageViewController: UIViewController {
+final class SignInPageViewController: UIViewController {
     
     let textLable: UILabel = {
         let lable = UILabel()
@@ -47,6 +47,30 @@ final class SingInPageViewController: UIViewController {
         return textField
     }()
     
+    let buttonSignIn: UIButton = {
+        let button = UIButton()
+        button.backgroundColor = Resouces.Colors.btnColor
+        button.setTitle("Sign in", for: .normal)
+        button.layer.cornerRadius = 15
+        return button
+    }()
+    
+    let lableSubText: UILabel = {
+        let lable = UILabel()
+        lable.text = "Alredy have an account?"
+        lable.font = UIFont.systemFont(ofSize: 12)
+        lable.textColor = Resouces.Colors.subText
+        return lable
+    }()
+    
+    let buttonLogiIn: UIButton = {
+        let button = UIButton()
+        button.setTitle("Log in", for: .normal)
+        button.setTitleColor(Resouces.Colors.btnColor, for: .normal)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 12)
+        return button
+    }()
+    
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         view.backgroundColor = .white
@@ -60,7 +84,7 @@ final class SingInPageViewController: UIViewController {
     
     //MARK: - Configure
     private func configure() {
-        [textLable, textFieldFirstName, textFieldLastName, textFieldEmail].forEach {
+        [textLable, textFieldFirstName, textFieldLastName, textFieldEmail, buttonSignIn, lableSubText, buttonLogiIn].forEach {
             $0.translatesAutoresizingMaskIntoConstraints = false
             view.addSubview($0)
         }
@@ -82,7 +106,21 @@ final class SingInPageViewController: UIViewController {
             textFieldEmail.widthAnchor.constraint(equalToConstant: 290),
             textFieldEmail.heightAnchor.constraint(equalToConstant: 30),
             textFieldEmail.topAnchor.constraint(equalTo: textFieldLastName.topAnchor, constant: 60),
-            textFieldEmail.centerXAnchor.constraint(equalTo: view.centerXAnchor)
+            textFieldEmail.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            
+            buttonSignIn.widthAnchor.constraint(equalToConstant: 290),
+            buttonSignIn.heightAnchor.constraint(equalToConstant: 46),
+            buttonSignIn.topAnchor.constraint(equalTo: textFieldEmail.topAnchor, constant: 60),
+            buttonSignIn.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            
+            lableSubText.topAnchor.constraint(equalTo: buttonSignIn.bottomAnchor, constant: 17),
+            lableSubText.leadingAnchor.constraint(equalTo: buttonSignIn.leadingAnchor),
+            
+            buttonLogiIn.widthAnchor.constraint(equalToConstant: 35),
+            buttonLogiIn.heightAnchor.constraint(equalToConstant: 10),
+            buttonLogiIn.leadingAnchor.constraint(equalTo: lableSubText.trailingAnchor, constant: 5),
+            buttonLogiIn.topAnchor.constraint(equalTo: buttonSignIn.bottomAnchor, constant: 17)
+            
         ])
     }
 }

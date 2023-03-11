@@ -20,7 +20,7 @@
 		B22FFD7029BA647500684C69 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22FFD6F29BA647500684C69 /* ThirdViewController.swift */; };
 		B22FFD7229BA66B300684C69 /* Storyboardable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22FFD7129BA66B300684C69 /* Storyboardable.swift */; };
 		B22FFD7729BB008D00684C69 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22FFD7629BB008D00684C69 /* StorageManager.swift */; };
-		B23D96BE29BBB31B00E94C06 /* SingInPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23D96BD29BBB31B00E94C06 /* SingInPageViewController.swift */; };
+		B23D96BE29BBB31B00E94C06 /* SignInPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23D96BD29BBB31B00E94C06 /* SignInPageViewController.swift */; };
 		B23D96C229BBBC6D00E94C06 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23D96C129BBBC6D00E94C06 /* UIColorExtension.swift */; };
 /* End PBXBuildFile section */
 
@@ -40,7 +40,7 @@
 		B22FFD6F29BA647500684C69 /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		B22FFD7129BA66B300684C69 /* Storyboardable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboardable.swift; sourceTree = "<group>"; };
 		B22FFD7629BB008D00684C69 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
-		B23D96BD29BBB31B00E94C06 /* SingInPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingInPageViewController.swift; sourceTree = "<group>"; };
+		B23D96BD29BBB31B00E94C06 /* SignInPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInPageViewController.swift; sourceTree = "<group>"; };
 		B23D96C129BBBC6D00E94C06 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -109,7 +109,7 @@
 				B22FFD6D29BA645E00684C69 /* SeccondViewController.swift */,
 				B22FFD6F29BA647500684C69 /* ThirdViewController.swift */,
 				B22FFD7129BA66B300684C69 /* Storyboardable.swift */,
-				B23D96BD29BBB31B00E94C06 /* SingInPageViewController.swift */,
+				B23D96BD29BBB31B00E94C06 /* SignInPageViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -230,7 +230,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B22FFD6929BA60C100684C69 /* Coordinator.swift in Sources */,
-				B23D96BE29BBB31B00E94C06 /* SingInPageViewController.swift in Sources */,
+				B23D96BE29BBB31B00E94C06 /* SignInPageViewController.swift in Sources */,
 				B22FFD5429BA58BD00684C69 /* FirstViewController.swift in Sources */,
 				B22FFD6E29BA645E00684C69 /* SeccondViewController.swift in Sources */,
 				B22FFD7729BB008D00684C69 /* StorageManager.swift in Sources */,

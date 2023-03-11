@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         coordinator = AppCoordinator(navigationController: navController)
         coordinator?.start()
         
-        let mainVC = SingInPageViewController()
+        let mainVC = SignInPageViewController()
         
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = mainVC
