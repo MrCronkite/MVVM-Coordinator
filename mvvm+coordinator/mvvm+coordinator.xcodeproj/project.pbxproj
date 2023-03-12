@@ -22,6 +22,7 @@
 		B22FFD7729BB008D00684C69 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22FFD7629BB008D00684C69 /* StorageManager.swift */; };
 		B23D96BE29BBB31B00E94C06 /* SignInPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23D96BD29BBB31B00E94C06 /* SignInPageViewController.swift */; };
 		B23D96C229BBBC6D00E94C06 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23D96C129BBBC6D00E94C06 /* UIColorExtension.swift */; };
+		B272F60629BE5CF3003FA27C /* LogInPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B272F60529BE5CF3003FA27C /* LogInPageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		B22FFD7629BB008D00684C69 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		B23D96BD29BBB31B00E94C06 /* SignInPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInPageViewController.swift; sourceTree = "<group>"; };
 		B23D96C129BBBC6D00E94C06 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		B272F60529BE5CF3003FA27C /* LogInPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInPageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 				B22FFD6F29BA647500684C69 /* ThirdViewController.swift */,
 				B22FFD7129BA66B300684C69 /* Storyboardable.swift */,
 				B23D96BD29BBB31B00E94C06 /* SignInPageViewController.swift */,
+				B272F60529BE5CF3003FA27C /* LogInPageViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -235,6 +238,7 @@
 				B22FFD6E29BA645E00684C69 /* SeccondViewController.swift in Sources */,
 				B22FFD7729BB008D00684C69 /* StorageManager.swift in Sources */,
 				B22FFD7029BA647500684C69 /* ThirdViewController.swift in Sources */,
+				B272F60629BE5CF3003FA27C /* LogInPageViewController.swift in Sources */,
 				B22FFD7229BA66B300684C69 /* Storyboardable.swift in Sources */,
 				B22FFD6B29BA621500684C69 /* AppCoordinator.swift in Sources */,
 				B23D96C229BBBC6D00E94C06 /* UIColorExtension.swift in Sources */,

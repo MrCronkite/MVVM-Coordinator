@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class SignInPageViewController: UIViewController {
+final class SignInPageViewController: UIViewController{
     
     let textLable: UILabel = {
         let lable = UILabel()
@@ -63,7 +63,7 @@ final class SignInPageViewController: UIViewController {
         return lable
     }()
     
-    let buttonLogiIn: UIButton = {
+    let buttonLogIn: UIButton = {
         let button = UIButton()
         button.setTitle("Log in", for: .normal)
         button.setTitleColor(Resouces.Colors.btnColor, for: .normal)
@@ -80,9 +80,20 @@ final class SignInPageViewController: UIViewController {
         return button
     }()
     
+    let buttonSignInWithApple: UIButton = {
+        let button = UIButton()
+        button.setImage(Resouces.Images.apple, for: .normal)
+        button.setTitle("  Sign in with Apple", for: .normal)
+        button.setTitleColor(.black, for: .normal)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 14)
+        return button
+    }()
+    
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         view.backgroundColor = .white
+        
+        buttonLogIn.addTarget(self, action: #selector(openLogInVC), for: .touchUpInside)
         
         configure()
     }
@@ -91,9 +102,22 @@ final class SignInPageViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
+    //MARK: - Action
+   @objc private func openLogInVC(){
+        
+    }
+    
     //MARK: - Configure
     private func configure() {
-        [textLable, textFieldFirstName, textFieldLastName, textFieldEmail, buttonSignIn, lableSubText, buttonLogiIn, buttonSignInWithGoogle].forEach {
+        [textLable,
+         textFieldFirstName,
+         textFieldLastName,
+         textFieldEmail,
+         buttonSignIn,
+         lableSubText,
+         buttonLogIn,
+         buttonSignInWithGoogle,
+         buttonSignInWithApple].forEach {
             $0.translatesAutoresizingMaskIntoConstraints = false
             view.addSubview($0)
         }
@@ -104,36 +128,41 @@ final class SignInPageViewController: UIViewController {
             
             textFieldFirstName.widthAnchor.constraint(equalToConstant: 290),
             textFieldFirstName.heightAnchor.constraint(equalToConstant: 30),
-            textFieldFirstName.topAnchor.constraint(equalTo: textLable.topAnchor, constant: 104),
+            textFieldFirstName.topAnchor.constraint(equalTo: textLable.bottomAnchor, constant: 77),
             textFieldFirstName.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             
             textFieldLastName.widthAnchor.constraint(equalToConstant: 290),
             textFieldLastName.heightAnchor.constraint(equalToConstant: 30),
-            textFieldLastName.topAnchor.constraint(equalTo: textFieldFirstName.topAnchor, constant: 60),
+            textFieldLastName.topAnchor.constraint(equalTo: textFieldFirstName.bottomAnchor, constant: 35),
             textFieldLastName.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             
             textFieldEmail.widthAnchor.constraint(equalToConstant: 290),
             textFieldEmail.heightAnchor.constraint(equalToConstant: 30),
-            textFieldEmail.topAnchor.constraint(equalTo: textFieldLastName.topAnchor, constant: 60),
+            textFieldEmail.topAnchor.constraint(equalTo: textFieldLastName.bottomAnchor, constant: 35),
             textFieldEmail.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             
             buttonSignIn.widthAnchor.constraint(equalToConstant: 290),
             buttonSignIn.heightAnchor.constraint(equalToConstant: 46),
-            buttonSignIn.topAnchor.constraint(equalTo: textFieldEmail.topAnchor, constant: 60),
+            buttonSignIn.topAnchor.constraint(equalTo: textFieldEmail.bottomAnchor, constant: 35),
             buttonSignIn.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             
             lableSubText.topAnchor.constraint(equalTo: buttonSignIn.bottomAnchor, constant: 17),
             lableSubText.leadingAnchor.constraint(equalTo: buttonSignIn.leadingAnchor),
             
-            buttonLogiIn.widthAnchor.constraint(equalToConstant: 35),
-            buttonLogiIn.heightAnchor.constraint(equalToConstant: 10),
-            buttonLogiIn.leadingAnchor.constraint(equalTo: lableSubText.trailingAnchor, constant: 5),
-            buttonLogiIn.topAnchor.constraint(equalTo: buttonSignIn.bottomAnchor, constant: 17),
+            buttonLogIn.widthAnchor.constraint(equalToConstant: 35),
+            buttonLogIn.heightAnchor.constraint(equalToConstant: 10),
+            buttonLogIn.leadingAnchor.constraint(equalTo: lableSubText.trailingAnchor, constant: 5),
+            buttonLogIn.topAnchor.constraint(equalTo: buttonSignIn.bottomAnchor, constant: 17),
             
-            buttonSignInWithGoogle.widthAnchor.constraint(equalToConstant: 150),
+            buttonSignInWithGoogle.widthAnchor.constraint(equalToConstant: 170),
             buttonSignInWithGoogle.heightAnchor.constraint(equalToConstant: 30),
-            buttonSignInWithGoogle.topAnchor.constraint(equalTo: lableSubText.bottomAnchor, constant: 50),
-            buttonSignInWithGoogle.centerXAnchor.constraint(equalTo: view.centerXAnchor)
+            buttonSignInWithGoogle.topAnchor.constraint(equalTo: lableSubText.bottomAnchor, constant: 70),
+            buttonSignInWithGoogle.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            
+            buttonSignInWithApple.widthAnchor.constraint(equalToConstant: 170),
+            buttonSignInWithApple.heightAnchor.constraint(equalToConstant: 30),
+            buttonSignInWithApple.topAnchor.constraint(equalTo: buttonSignInWithGoogle.bottomAnchor, constant: 35),
+            buttonSignInWithApple.centerXAnchor.constraint(equalTo: view.centerXAnchor)
             
         ])
     }
