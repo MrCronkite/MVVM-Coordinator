@@ -71,6 +71,15 @@ final class SignInPageViewController: UIViewController {
         return button
     }()
     
+    let buttonSignInWithGoogle: UIButton = {
+        let button = UIButton()
+        button.setImage(Resouces.Images.google, for: .normal)
+        button.setTitle("  Sign in with Google", for: .normal)
+        button.setTitleColor(.black, for: .normal)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 14)
+        return button
+    }()
+    
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         view.backgroundColor = .white
@@ -84,7 +93,7 @@ final class SignInPageViewController: UIViewController {
     
     //MARK: - Configure
     private func configure() {
-        [textLable, textFieldFirstName, textFieldLastName, textFieldEmail, buttonSignIn, lableSubText, buttonLogiIn].forEach {
+        [textLable, textFieldFirstName, textFieldLastName, textFieldEmail, buttonSignIn, lableSubText, buttonLogiIn, buttonSignInWithGoogle].forEach {
             $0.translatesAutoresizingMaskIntoConstraints = false
             view.addSubview($0)
         }
@@ -119,7 +128,12 @@ final class SignInPageViewController: UIViewController {
             buttonLogiIn.widthAnchor.constraint(equalToConstant: 35),
             buttonLogiIn.heightAnchor.constraint(equalToConstant: 10),
             buttonLogiIn.leadingAnchor.constraint(equalTo: lableSubText.trailingAnchor, constant: 5),
-            buttonLogiIn.topAnchor.constraint(equalTo: buttonSignIn.bottomAnchor, constant: 17)
+            buttonLogiIn.topAnchor.constraint(equalTo: buttonSignIn.bottomAnchor, constant: 17),
+            
+            buttonSignInWithGoogle.widthAnchor.constraint(equalToConstant: 150),
+            buttonSignInWithGoogle.heightAnchor.constraint(equalToConstant: 30),
+            buttonSignInWithGoogle.topAnchor.constraint(equalTo: lableSubText.bottomAnchor, constant: 50),
+            buttonSignInWithGoogle.centerXAnchor.constraint(equalTo: view.centerXAnchor)
             
         ])
     }

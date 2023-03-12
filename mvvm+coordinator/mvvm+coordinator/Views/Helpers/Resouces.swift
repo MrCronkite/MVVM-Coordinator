@@ -15,4 +15,9 @@ enum Resouces {
         static var btnColor = UIColor(hexString: "#4E55D7")
         static var subText = UIColor(hexString: "#808080")
     }
+    
+    enum Images {
+        static var google = UIImage(named: "google")
+        static var apple = UIImage(named: "apple")
+    }
 }

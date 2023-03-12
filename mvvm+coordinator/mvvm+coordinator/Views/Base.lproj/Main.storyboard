@@ -79,6 +79,12 @@
                                     <action selector="openFirst:" destination="EzK-GS-1y6" eventType="touchUpInside" id="585-sK-sIb"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bot-b4-RLP">
+                                <rect key="frame" x="66" y="583" width="208" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="google" title="   Sign in with Google"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="KnD-uT-dzi"/>
                         <color key="backgroundColor" systemColor="systemYellowColor"/>
@@ -127,6 +133,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="google" width="24" height="25"/>
         <systemColor name="systemBrownColor">
             <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
