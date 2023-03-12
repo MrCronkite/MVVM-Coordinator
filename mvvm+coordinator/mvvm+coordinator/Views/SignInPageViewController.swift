@@ -104,7 +104,8 @@ final class SignInPageViewController: UIViewController{
     
     //MARK: - Action
    @objc private func openLogInVC(){
-        
+        let vc = LogInPageViewController()
+        present(vc, animated: true)
     }
     
     //MARK: - Configure
