@@ -20,10 +20,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         coordinator = AppCoordinator(navigationController: navController)
         coordinator?.start()
         
-        let mainVC = SignInPageViewController()
-        
         window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = mainVC
+        window?.rootViewController = navController
         window?.makeKeyAndVisible()
         
         return true
