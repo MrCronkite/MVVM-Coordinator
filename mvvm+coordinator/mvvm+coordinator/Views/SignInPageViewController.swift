@@ -9,6 +9,8 @@ import UIKit
 
 final class SignInPageViewController: UIViewController{
     
+    weak var coordinator: AppCoordinator?
+    
     let textLable: UILabel = {
         let lable = UILabel()
         lable.font = UIFont.systemFont(ofSize: 30, weight: .medium)
@@ -104,8 +106,7 @@ final class SignInPageViewController: UIViewController{
     
     //MARK: - Action
    @objc private func openLogInVC(){
-        let vc = LogInPageViewController()
-        present(vc, animated: true)
+       coordinator?.openLoginPage()
     }
     
     //MARK: - Configure
