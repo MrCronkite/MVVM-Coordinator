@@ -8,35 +8,39 @@
 import UIKit
 
 final class AppCoordinator: Coordinator {
+    func start() {
+        print("")
+    }
+    
     var navigationController: UINavigationController
     
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
     }
     
-    func start() {
-        let vc = FirstViewController.createObj()
-        vc.coordinator = self
-        navigationController.pushViewController(vc, animated: false)
-    }
-    
-    func openFirsVC() {
-        let vc = FirstViewController.createObj()
-        vc.coordinator = self
-        navigationController.pushViewController(vc, animated: true)
-    }
-    
-    func openSecondVC() {
-        let vc = SeccondViewController.createObj()
-        vc.coordinator = self
-        navigationController.pushViewController(vc, animated: true)
-    }
-    
-    func openThirddVC() {
-        let vc = ThirdViewController.createObj()
-        vc.coordinator = self
-        navigationController.pushViewController(vc, animated: true)
-    }
+//    func start() {
+//        let vc = FirstViewController.createObj()
+//        vc.coordinator = self
+//        navigationController.pushViewController(vc, animated: false)
+//    }
+//
+//    func openFirsVC() {
+//        let vc = FirstViewController.createObj()
+//        vc.coordinator = self
+//        navigationController.pushViewController(vc, animated: true)
+//    }
+//
+//    func openSecondVC() {
+//        let vc = SeccondViewController.createObj()
+//        vc.coordinator = self
+//        navigationController.pushViewController(vc, animated: true)
+//    }
+//
+//    func openThirddVC() {
+//        let vc = ThirdViewController.createObj()
+//        vc.coordinator = self
+//        navigationController.pushViewController(vc, animated: true)
+//    }
     
     
 }

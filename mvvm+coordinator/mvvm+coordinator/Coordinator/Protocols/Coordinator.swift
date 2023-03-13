@@ -7,8 +7,10 @@
 
 import UIKit
 
-protocol Coordinator {
-    var navigationController: UINavigationController { get set }
-    
+protocol Coordinatable {
     func start() 
+}
+
+protocol Presentable {
+    var toPresent: UIViewController? {get}
 }
