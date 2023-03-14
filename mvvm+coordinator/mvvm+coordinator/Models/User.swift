@@ -13,3 +13,9 @@ struct User {
     let email: String?
     let password: String?
 }
+
+extension User {
+    static var login = [
+       User(firstName: "Vlad", lastName: "Shima", email: "1234@gmail.com", password: "123456")
+    ]
+}

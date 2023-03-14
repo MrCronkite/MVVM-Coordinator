@@ -19,6 +19,8 @@
 		B23D96C229BBBC6D00E94C06 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23D96C129BBBC6D00E94C06 /* UIColorExtension.swift */; };
 		B272F60629BE5CF3003FA27C /* LogInPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B272F60529BE5CF3003FA27C /* LogInPageViewController.swift */; };
 		B2D2B29529C1139000B498C3 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D2B29429C1139000B498C3 /* User.swift */; };
+		B2D2B29829C1152800B498C3 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D2B29729C1152800B498C3 /* ViewModel.swift */; };
+		B2D2B29A29C1158500B498C3 /* Dynamic.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D2B29929C1158500B498C3 /* Dynamic.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		B23D96C129BBBC6D00E94C06 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		B272F60529BE5CF3003FA27C /* LogInPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInPageViewController.swift; sourceTree = "<group>"; };
 		B2D2B29429C1139000B498C3 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		B2D2B29729C1152800B498C3 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		B2D2B29929C1158500B498C3 /* Dynamic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dynamic.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +75,7 @@
 				B22FFD7429BAFFFA00684C69 /* Application */,
 				B2D2B29329C1136600B498C3 /* Models */,
 				B22FFD6629BA607900684C69 /* Coordinator */,
+				B2D2B29629C114E600B498C3 /* ViewModels */,
 				B22FFD6C29BA62A500684C69 /* Views */,
 				B22FFD7329BAFF5E00684C69 /* SupportingFiles */,
 				B22FFD7529BB001D00684C69 /* Storage */,
@@ -157,6 +162,23 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		B2D2B29629C114E600B498C3 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				B2D2B29B29C1158F00B498C3 /* Bindings */,
+				B2D2B29729C1152800B498C3 /* ViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		B2D2B29B29C1158F00B498C3 /* Bindings */ = {
+			isa = PBXGroup;
+			children = (
+				B2D2B29929C1158500B498C3 /* Dynamic.swift */,
+			);
+			path = Bindings;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -233,8 +255,10 @@
 				B272F60629BE5CF3003FA27C /* LogInPageViewController.swift in Sources */,
 				B22FFD6B29BA621500684C69 /* AppCoordinator.swift in Sources */,
 				B23D96C229BBBC6D00E94C06 /* UIColorExtension.swift in Sources */,
+				B2D2B29829C1152800B498C3 /* ViewModel.swift in Sources */,
 				B22FFD5029BA58BD00684C69 /* AppDelegate.swift in Sources */,
 				B20FFB6B29BBBD5E005318CD /* Resouces.swift in Sources */,
+				B2D2B29A29C1158500B498C3 /* Dynamic.swift in Sources */,
 				B2D2B29529C1139000B498C3 /* User.swift in Sources */,
 				B22FFD5A29BA58BD00684C69 /* mvvm_coordinator.xcdatamodeld in Sources */,
 			);
