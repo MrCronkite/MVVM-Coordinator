@@ -96,7 +96,6 @@ final class SignInPageViewController: UIViewController{
         view.backgroundColor = .white
         
         buttonLogIn.addTarget(self, action: #selector(openLogInVC), for: .touchUpInside)
-        
         configure()
     }
     

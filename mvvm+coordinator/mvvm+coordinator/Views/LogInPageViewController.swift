@@ -9,6 +9,8 @@ import UIKit
 
 final class LogInPageViewController: UIViewController{
     
+    weak var coordinator: AppCoordinator?
+    
     let textLable: UILabel = {
         let lable = UILabel()
         lable.font = UIFont.systemFont(ofSize: 30, weight: .medium)

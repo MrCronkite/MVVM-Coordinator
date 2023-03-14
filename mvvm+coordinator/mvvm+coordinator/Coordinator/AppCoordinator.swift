@@ -10,6 +10,7 @@ import UIKit
 final class AppCoordinator: Coordinator {
     var navigationController: UINavigationController
     
+    
     weak var coordinator: AppCoordinator?
     
     init(navigationController: UINavigationController) {
@@ -18,12 +19,14 @@ final class AppCoordinator: Coordinator {
     
     func start() {
         let vc = SignInPageViewController()
+        vc.coordinator = self
         navigationController.pushViewController(vc, animated: false)
     }
     
     func openLoginPage() {
         let vc = LogInPageViewController()
-        
+        vc.coordinator = self
+        navigationController.pushViewController(vc, animated: true)
     }
     
     
