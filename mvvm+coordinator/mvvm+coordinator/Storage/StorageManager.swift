@@ -5,11 +5,21 @@
 //  Created by admin1 on 10.03.23.
 //
 
-import Foundation
+import UIKit
+import CoreData
 
 //MARK: - CRUD
-
-public final class CoreDataManager {
+public final class CoreDataManager: NSObject {
     public static var shared = CoreDataManager()
-    private init() {}
+    private override init() {}
+    
+    private var appDelegate: AppDelegate {
+        UIApplication.shared.delegate as! AppDelegate
+    }
+    
+    private var context: NSManagedObjectContext {
+        appDelegate.persistentContainer.viewContext
+    }
+    
+    
 }
