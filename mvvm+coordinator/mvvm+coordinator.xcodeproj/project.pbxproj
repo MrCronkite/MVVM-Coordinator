@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		B20FFB6B29BBBD5E005318CD /* Resouces.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20FFB6A29BBBD5E005318CD /* Resouces.swift */; };
 		B22FFD5029BA58BD00684C69 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22FFD4F29BA58BD00684C69 /* AppDelegate.swift */; };
-		B22FFD5A29BA58BD00684C69 /* mvvm_coordinator.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B22FFD5829BA58BD00684C69 /* mvvm_coordinator.xcdatamodeld */; };
 		B22FFD5C29BA58BF00684C69 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B22FFD5B29BA58BF00684C69 /* Assets.xcassets */; };
 		B22FFD5F29BA58BF00684C69 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B22FFD5D29BA58BF00684C69 /* LaunchScreen.storyboard */; };
 		B22FFD6929BA60C100684C69 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22FFD6829BA60C100684C69 /* Coordinator.swift */; };
@@ -18,16 +17,16 @@
 		B23D96BE29BBB31B00E94C06 /* SignInPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23D96BD29BBB31B00E94C06 /* SignInPageViewController.swift */; };
 		B23D96C229BBBC6D00E94C06 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23D96C129BBBC6D00E94C06 /* UIColorExtension.swift */; };
 		B272F60629BE5CF3003FA27C /* LogInPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B272F60529BE5CF3003FA27C /* LogInPageViewController.swift */; };
-		B2D2B29529C1139000B498C3 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D2B29429C1139000B498C3 /* User.swift */; };
+		B2D2B29529C1139000B498C3 /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D2B29429C1139000B498C3 /* Users.swift */; };
 		B2D2B29829C1152800B498C3 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D2B29729C1152800B498C3 /* ViewModel.swift */; };
 		B2D2B29A29C1158500B498C3 /* Dynamic.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D2B29929C1158500B498C3 /* Dynamic.swift */; };
+		B2E5FCF829C7A65900F71F9D /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E5FCF629C7A65900F71F9D /* User+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B20FFB6A29BBBD5E005318CD /* Resouces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resouces.swift; sourceTree = "<group>"; };
 		B22FFD4C29BA58BD00684C69 /* mvvm+coordinator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "mvvm+coordinator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B22FFD4F29BA58BD00684C69 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B22FFD5929BA58BD00684C69 /* mvvm_coordinator.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = mvvm_coordinator.xcdatamodel; sourceTree = "<group>"; };
 		B22FFD5B29BA58BF00684C69 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B22FFD5E29BA58BF00684C69 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B22FFD6029BA58BF00684C69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -37,9 +36,10 @@
 		B23D96BD29BBB31B00E94C06 /* SignInPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInPageViewController.swift; sourceTree = "<group>"; };
 		B23D96C129BBBC6D00E94C06 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		B272F60529BE5CF3003FA27C /* LogInPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInPageViewController.swift; sourceTree = "<group>"; };
-		B2D2B29429C1139000B498C3 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		B2D2B29429C1139000B498C3 /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
 		B2D2B29729C1152800B498C3 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		B2D2B29929C1158500B498C3 /* Dynamic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dynamic.swift; sourceTree = "<group>"; };
+		B2E5FCF629C7A65900F71F9D /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,7 +131,7 @@
 		B22FFD7529BB001D00684C69 /* Storage */ = {
 			isa = PBXGroup;
 			children = (
-				B22FFD5829BA58BD00684C69 /* mvvm_coordinator.xcdatamodeld */,
+				B2E5FCF629C7A65900F71F9D /* User+CoreDataProperties.swift */,
 				B22FFD7629BB008D00684C69 /* StorageManager.swift */,
 			);
 			path = Storage;
@@ -157,7 +157,7 @@
 		B2D2B29329C1136600B498C3 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				B2D2B29429C1139000B498C3 /* User.swift */,
+				B2D2B29429C1139000B498C3 /* Users.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -258,9 +258,9 @@
 				B2D2B29829C1152800B498C3 /* ViewModel.swift in Sources */,
 				B22FFD5029BA58BD00684C69 /* AppDelegate.swift in Sources */,
 				B20FFB6B29BBBD5E005318CD /* Resouces.swift in Sources */,
+				B2E5FCF829C7A65900F71F9D /* User+CoreDataProperties.swift in Sources */,
 				B2D2B29A29C1158500B498C3 /* Dynamic.swift in Sources */,
-				B2D2B29529C1139000B498C3 /* User.swift in Sources */,
-				B22FFD5A29BA58BD00684C69 /* mvvm_coordinator.xcdatamodeld in Sources */,
+				B2D2B29529C1139000B498C3 /* Users.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -466,19 +466,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		B22FFD5829BA58BD00684C69 /* mvvm_coordinator.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				B22FFD5929BA58BD00684C69 /* mvvm_coordinator.xcdatamodel */,
-			);
-			currentVersion = B22FFD5929BA58BD00684C69 /* mvvm_coordinator.xcdatamodel */;
-			path = mvvm_coordinator.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = B22FFD4429BA58BD00684C69 /* Project object */;
 }

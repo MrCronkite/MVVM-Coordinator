@@ -7,15 +7,15 @@
 
 import Foundation
 
-struct User {
+struct Users {
     let firstName: String?
     let lastName: String?
     let email: String?
     let password: String?
 }
 
-extension User {
+extension Users {
     static var login = [
-       User(firstName: "Vlad", lastName: "Shima", email: "1234@gmail.com", password: "123456")
+       Users(firstName: "Vlad", lastName: "Shima", email: "1234@gmail.com", password: "123456")
     ]
 }
