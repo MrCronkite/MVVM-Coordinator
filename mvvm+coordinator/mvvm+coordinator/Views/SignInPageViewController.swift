@@ -95,6 +95,8 @@ final class SignInPageViewController: UIViewController{
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         view.backgroundColor = .white
         
+        print(CoreDataManager.shared.fetchUser("shima"))
+        
         buttonLogIn.addTarget(self, action: #selector(openLogInVC), for: .touchUpInside)
         configure()
     }

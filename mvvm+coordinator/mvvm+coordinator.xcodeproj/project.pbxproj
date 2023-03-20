@@ -21,6 +21,7 @@
 		B2D2B29829C1152800B498C3 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D2B29729C1152800B498C3 /* ViewModel.swift */; };
 		B2D2B29A29C1158500B498C3 /* Dynamic.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D2B29929C1158500B498C3 /* Dynamic.swift */; };
 		B2E5FCF829C7A65900F71F9D /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E5FCF629C7A65900F71F9D /* User+CoreDataProperties.swift */; };
+		B2E5FCFD29C8E0C800F71F9D /* mvvm_coordinator.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B2E5FCFB29C8E0C800F71F9D /* mvvm_coordinator.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		B2D2B29729C1152800B498C3 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		B2D2B29929C1158500B498C3 /* Dynamic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dynamic.swift; sourceTree = "<group>"; };
 		B2E5FCF629C7A65900F71F9D /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		B2E5FCFC29C8E0C800F71F9D /* mvvm_coordinator.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = mvvm_coordinator.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +135,7 @@
 			children = (
 				B2E5FCF629C7A65900F71F9D /* User+CoreDataProperties.swift */,
 				B22FFD7629BB008D00684C69 /* StorageManager.swift */,
+				B2E5FCFB29C8E0C800F71F9D /* mvvm_coordinator.xcdatamodeld */,
 			);
 			path = Storage;
 			sourceTree = "<group>";
@@ -251,6 +254,7 @@
 			files = (
 				B22FFD6929BA60C100684C69 /* Coordinator.swift in Sources */,
 				B23D96BE29BBB31B00E94C06 /* SignInPageViewController.swift in Sources */,
+				B2E5FCFD29C8E0C800F71F9D /* mvvm_coordinator.xcdatamodeld in Sources */,
 				B22FFD7729BB008D00684C69 /* StorageManager.swift in Sources */,
 				B272F60629BE5CF3003FA27C /* LogInPageViewController.swift in Sources */,
 				B22FFD6B29BA621500684C69 /* AppCoordinator.swift in Sources */,
@@ -466,6 +470,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		B2E5FCFB29C8E0C800F71F9D /* mvvm_coordinator.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				B2E5FCFC29C8E0C800F71F9D /* mvvm_coordinator.xcdatamodel */,
+			);
+			currentVersion = B2E5FCFC29C8E0C800F71F9D /* mvvm_coordinator.xcdatamodel */;
+			path = mvvm_coordinator.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = B22FFD4429BA58BD00684C69 /* Project object */;
 }

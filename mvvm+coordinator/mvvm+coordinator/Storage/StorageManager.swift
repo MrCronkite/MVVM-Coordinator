@@ -21,6 +21,12 @@ public final class CoreDataManager: NSObject {
         appDelegate.persistentContainer.viewContext
     }
     
+    public func logCD(){
+        if let url = appDelegate.persistentContainer.persistentStoreCoordinator.persistentStores.first?.url {
+            print("db url - \(url)")
+        }
+    }
+    
     public func createUser(_ firstName: String, lastName: String, email: String, password: String) {
         guard let userEntityDescription = NSEntityDescription.entity(forEntityName: "User", in: context) else { return }
         let user = User(entity: userEntityDescription, insertInto: context)
@@ -38,7 +44,7 @@ public final class CoreDataManager: NSObject {
     }
     
     public func fetchUser(_ email: String) -> User? {
-        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Photo")
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "User")
         do {
             let users = try? context.fetch(fetchRequest) as? [User]
             return users?.first(where: { $0.email == email })
