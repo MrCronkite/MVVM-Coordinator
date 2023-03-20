@@ -21,5 +21,20 @@ public final class CoreDataManager: NSObject {
         appDelegate.persistentContainer.viewContext
     }
     
+    public func createUser(_ firstName: String, lastName: String, email: String, password: String) {
+        guard let userEntityDescription = NSEntityDescription.entity(forEntityName: "User", in: context) else { return }
+        let user = User(entity: userEntityDescription, insertInto: context)
+        user.firstName = firstName
+        user.lastName = lastName
+        user.email = email
+        user.password = password
+        
+        appDelegate.saveContext()
+    }
+    
+    public func fetchUsers() -> [User] {
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "User")
+        do { return (try? context.fetch(fetchRequest) as? [User]) ?? [] }
+    }
     
 }
