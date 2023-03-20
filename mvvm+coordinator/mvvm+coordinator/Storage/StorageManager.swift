@@ -49,7 +49,7 @@ public final class CoreDataManager: NSObject {
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "User")
         do {
             guard let users = try? context.fetch(fetchRequest) as? [User],
-                  let user = users.first(where: {$0.email == email }) else { return }
+                  let user = users.first(where: {$0.email == email}) else { return }
             user.email = email
             user.lastName = lastName
             user.firstName = firstName
@@ -59,6 +59,26 @@ public final class CoreDataManager: NSObject {
         appDelegate.saveContext()
     }
     
-    
+    public func deletAllUsers() {
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "User")
+        do {
+            let users = try? context.fetch(fetchRequest) as? [User]
+            users?.forEach { context.delete($0) }
+        }
+        
+        appDelegate.saveContext()
+    }
+
+    public func deletUser(with email: String) {
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "User")
+        do {
+           guard let users = try? context.fetch(fetchRequest) as? [User],
+                 let user = users.first(where: {$0.email == email}) else { return }
+            context.delete(user)
+        }
+        
+        appDelegate.saveContext()
+    }
+
     
 }
