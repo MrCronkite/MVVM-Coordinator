@@ -37,4 +37,28 @@ public final class CoreDataManager: NSObject {
         do { return (try? context.fetch(fetchRequest) as? [User]) ?? [] }
     }
     
+    public func fetchUser(_ email: String) -> User? {
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Photo")
+        do {
+            let users = try? context.fetch(fetchRequest) as? [User]
+            return users?.first(where: { $0.email == email })
+        }
+    }
+    
+    public func updataUser(with firstName: String, lastName: String, email: String, password: String ) {
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "User")
+        do {
+            guard let users = try? context.fetch(fetchRequest) as? [User],
+                  let user = users.first(where: {$0.email == email }) else { return }
+            user.email = email
+            user.lastName = lastName
+            user.firstName = firstName
+            user.password = password
+        }
+        
+        appDelegate.saveContext()
+    }
+    
+    
+    
 }
