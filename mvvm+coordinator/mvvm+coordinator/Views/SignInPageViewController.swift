@@ -100,6 +100,7 @@ final class SignInPageViewController: UIViewController{
         print(CoreDataManager.shared.fetchUser("shima") as Any)
         
         buttonLogIn.addTarget(self, action: #selector(openLogInVC), for: .touchUpInside)
+        buttonSignIn.addTarget(self, action: #selector(createUserAccount), for: .touchUpInside)
         configure()
         
         bindViewModal()
@@ -114,7 +115,11 @@ final class SignInPageViewController: UIViewController{
         coordinator?.openLoginPage()
     }
     
-    func bindViewModal() {
+    @objc private func createUserAccount() {
+        print("hello")
+    }
+    
+    private func bindViewModal() {
         viewModel.statusText.bind { (statusText) in
             DispatchQueue.main.async {
                 print(statusText)

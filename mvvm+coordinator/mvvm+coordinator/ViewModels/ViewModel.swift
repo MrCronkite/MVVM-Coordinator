@@ -9,4 +9,5 @@ import Foundation
 
 class ViewModel {
     var statusText = Dynamic("")
+    
 }
