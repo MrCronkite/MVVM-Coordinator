@@ -9,6 +9,8 @@ import UIKit
 
 final class SignInPageViewController: UIViewController{
     
+    var viewModel = ViewModel()
+    
     weak var coordinator: AppCoordinator?
     
     let textLable: UILabel = {
@@ -95,10 +97,12 @@ final class SignInPageViewController: UIViewController{
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         view.backgroundColor = .white
         
-        print(CoreDataManager.shared.fetchUser("shima"))
+        print(CoreDataManager.shared.fetchUser("shima") as Any)
         
         buttonLogIn.addTarget(self, action: #selector(openLogInVC), for: .touchUpInside)
         configure()
+        
+        bindViewModal()
     }
     
     required init?(coder: NSCoder) {
@@ -106,8 +110,16 @@ final class SignInPageViewController: UIViewController{
     }
     
     //MARK: - Action
-   @objc private func openLogInVC(){
-       coordinator?.openLoginPage()
+    @objc private func openLogInVC(){
+        coordinator?.openLoginPage()
+    }
+    
+    func bindViewModal() {
+        viewModel.statusText.bind { (statusText) in
+            DispatchQueue.main.async {
+                print(statusText)
+            }
+        }
     }
     
     //MARK: - Configure
