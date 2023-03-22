@@ -129,7 +129,9 @@ final class SignInPageViewController: UIViewController{
             textFieldLastName.backgroundColor = Resouces.Colors.textFieldColorbg
             textFieldEmail.backgroundColor = Resouces.Colors.textFieldColorbg
             let password = Int.random(in: 1...10000)
-            print(password)
+            guard CoreDataManager.shared.fetchUser(textFieldEmail.text!) == nil else
+            {return alertMessage(title: "email error",
+                                 message: "пользователь с такой почтой уже зарегестрирован")}
             CoreDataManager.shared.createUser(textFieldFirstName.text!,
                                               lastName: textFieldLastName.text!,
                                               email: textFieldEmail.text!,
@@ -144,6 +146,15 @@ final class SignInPageViewController: UIViewController{
                 print(statusText)
             }
         }
+    }
+    
+    func alertMessage(title: String, message: String) {
+        let alert = UIAlertController(title: title,
+                                      message: message,
+                                      preferredStyle: .alert)
+        let action = UIAlertAction(title: "ok", style: .default)
+        alert.addAction(action)
+        self.present(alert, animated: true)
     }
     
     //MARK: - Configure
