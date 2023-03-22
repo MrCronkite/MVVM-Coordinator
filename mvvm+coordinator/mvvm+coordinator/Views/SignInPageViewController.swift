@@ -116,12 +116,25 @@ final class SignInPageViewController: UIViewController{
     }
     
     @objc private func createUserAccount() {
-        if textFieldEmail.text != "" {
-            let user = CoreDataManager.shared.fetchUser((textFieldEmail.text?.lowercased())!)
-            print(user!.password!)
+        if textFieldFirstName.text == "" {
+            textFieldFirstName.backgroundColor = .red.withAlphaComponent(0.4)
+        } else if textFieldLastName.text == "" {
+            textFieldFirstName.backgroundColor = Resouces.Colors.textFieldColorbg
+            textFieldLastName.backgroundColor = .red.withAlphaComponent(0.4)
+        } else if textFieldEmail.text == "" {
+            textFieldLastName.backgroundColor = Resouces.Colors.textFieldColorbg
+            textFieldEmail.backgroundColor = .red.withAlphaComponent(0.4)
         } else {
-            textFieldEmail.layer.borderWidth = 1
-            textFieldEmail.layer.borderColor = UIColor.red.cgColor
+            textFieldFirstName.backgroundColor = Resouces.Colors.textFieldColorbg
+            textFieldLastName.backgroundColor = Resouces.Colors.textFieldColorbg
+            textFieldEmail.backgroundColor = Resouces.Colors.textFieldColorbg
+            let password = Int.random(in: 1...10000)
+            print(password)
+            CoreDataManager.shared.createUser(textFieldFirstName.text!,
+                                              lastName: textFieldLastName.text!,
+                                              email: textFieldEmail.text!,
+                                              password: String(password))
+            print(CoreDataManager.shared.fetchUsers())
         }
     }
     
