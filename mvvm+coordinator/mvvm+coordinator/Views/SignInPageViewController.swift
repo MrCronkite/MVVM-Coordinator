@@ -116,7 +116,13 @@ final class SignInPageViewController: UIViewController{
     }
     
     @objc private func createUserAccount() {
-        print("hello")
+        if textFieldEmail.text != "" {
+            let user = CoreDataManager.shared.fetchUser((textFieldEmail.text?.lowercased())!)
+            print(user!.password!)
+        } else {
+            textFieldEmail.layer.borderWidth = 1
+            textFieldEmail.layer.borderColor = UIColor.red.cgColor
+        }
     }
     
     private func bindViewModal() {
